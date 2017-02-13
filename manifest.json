@@ -3,12 +3,8 @@
   "name": "Multicolered Contributions",
   "version": "1.0",
   "description": "A simple chrome extension to change github contributions color",
-  "icons": {
-    "128": "icon_128.png"
-  },
   "browser_action": {
     "default_title": "",
-    "default_icon": "icon_16.png",
     "default_popup": "popup.html"
   }
 }
