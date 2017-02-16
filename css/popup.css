@@ -1,8 +1,28 @@
 body {
-    width: 400px;
+    width: 250px;
     margin: 0px;
     background-color: #fff;
-    min-width: 357px;
+    min-width: 200px;
     overflow-x: hidden;
     font-family: "Helvetica Neue",Helvetica,"Hiragino Kaku Gothic Pro","Lucida Grande",Verdana,Arial,Meiryo,"メイリオ",sans-serif;
+}
+
+.col-xs-3 {
+    height: 50px !important;
+}
+
+.red {
+    background-color: red; 
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
 }
