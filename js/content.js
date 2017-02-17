@@ -1,12 +1,12 @@
  'use strict';
 
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    if (msg.rpc == 'red') {
-        changeColor();
-    }
+    var baseColorId = msg.rpc;
+    var colors = getColorArray(baseColorId);
+    changeColor(colors);
   });
 
-function changeColor() {
+function changeColor(colors) {
     var calenderGraphSvg = document.querySelector(".js-calendar-graph-svg");
 	var gElements = calenderGraphSvg.querySelector("g").getElementsByTagName("g");
 	var legendElements = document.querySelector(".legend").getElementsByTagName("li");
