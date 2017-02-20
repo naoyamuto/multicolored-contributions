@@ -58,19 +58,33 @@ function changeColor(colors) {
 }
 
 function getColorArray(colorId) {
+    // Color Definition
+    const strawberrys = ["#ff80bf", "#ff2b95", "#ff0080", "#bb004b"];
+    const skys = ["#cae7f2", "#6cbad8", "#1f91be", "#007fb1"];
+    const honeys = ["#F9DFD5", "#EDA184", "#E06A3B", "#DA5019"];
+    const indigos = ["#80bfff", "#5678AF", "#2D579A", "#002b55"];
+    const chocolates = ["#ffbf80", "#ff952b", "#d56a00", "#4b251a"];
+    const lavenders = ["#f1b8f1", "#ea95ea", "#e272e2", "#b123b1"];
+
     var colorArray = [];
     switch (colorId) {
-        case "red":
-            colorArray = redColors;
+        case "strawberry":
+            colorArray = strawberrys;
             break;
-        case "blue":
-            colorArray = blueColors;
+        case "sky":
+            colorArray = skys;
             break;
-        case "orange":
-            colorArray = orangeColors;
+        case "honey":
+            colorArray = honeys;
             break;
-        case "yellow":
-            colorArray = yellowColors;
+        case "indigo":
+            colorArray = indigos;
+            break;
+        case "chocolate":
+            colorArray = chocolates;
+            break;
+        case "lavender":
+            colorArray = lavenders;
             break;
         default:
             break;
