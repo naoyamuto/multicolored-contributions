@@ -1,9 +1,13 @@
  'use strict';
 
+// Color Definition
+const redColors = ["#e68585", "#c66565", "#a23f3f", "#681d1d"];
+const blueColors = ["#cae7f2", "#6cbad8", "#1f91be", "#007fb1"];
+const yellowColors = ["#FFF280", "#FFEE55", "#F9DB57", "#EDAD0B"];
+const orangeColors = ["#F9DFD5", "#EDA184", "#E06A3B", "#DA5019"];
+
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
-    var baseColorId = msg.rpc;
-    var colors = getColorArray(baseColorId);
-    changeColor(colors);
+    changeColor(getColorArray(msg.rpc));
   });
 
 function changeColor(colors) {
@@ -19,16 +23,16 @@ function changeColor(colors) {
 
 			switch(fill) {
 				case "#d6e685":
-                    rectElement.setAttribute("fill", "#e68585");
+                    rectElement.setAttribute("fill", colors[0]);
                     break;
                 case "#8cc665":
-                    rectElement.setAttribute("fill", "#c66565");
+                    rectElement.setAttribute("fill", colors[1]);
                     break;
                 case "#44a340":
-                    rectElement.setAttribute("fill", "#a23f3f");
+                    rectElement.setAttribute("fill", colors[2]);
                     break;
                 case "#1e6823":
-                    rectElement.setAttribute("fill", "#681d1d");
+                    rectElement.setAttribute("fill", colors[3]);
                     break;
                 default:
                     break; 
@@ -42,16 +46,16 @@ function changeColor(colors) {
 
 		switch(legendElementColor) {
 			case "rgb(214, 230, 133)":
-                style.backgroundColor = "#e68585";
+                style.backgroundColor = colors[0];
                 break;
             case "rgb(140, 198, 101)":
-                style.backgroundColor = "#c66565";
+                style.backgroundColor = colors[1];
                 break;
             case "rgb(68, 163, 64)":
-                style.backgroundColor = "#a23f3f";
+                style.backgroundColor = colors[2];
                 break;
             case "rgb(30, 104, 35)":
-                style.backgroundColor = "#681d1d";
+                style.backgroundColor = colors[3];
                 break;
             default:
                 break;
@@ -59,12 +63,23 @@ function changeColor(colors) {
 	});
 }
 
-function getColorArray(baseColor) {
+function getColorArray(colorId) {
     var colorArray = [];
-    switch (baseColor) {
+    switch (colorId) {
         case "red":
-            colorArray.push("");
+            colorArray = redColors;
+            break;
         case "blue":
+            colorArray = blueColors;
+            break;
+        case "orange":
+            colorArray = orangeColors;
+            break;
+        case "yellow":
+            colorArray = yellowColors;
+            break;
+        default:
+            break;
     }
     return colorArray
 }

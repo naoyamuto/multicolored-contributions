@@ -3,7 +3,6 @@
 function onClick(e) {
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
     var id = e.target.id;
-    console.log(id);
     chrome.tabs.sendMessage(tabs[0].id, {rpc: id}, (msg) => {
     });
   });
