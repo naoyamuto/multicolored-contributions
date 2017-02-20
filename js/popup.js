@@ -2,15 +2,15 @@
 
 function onClick(e) {
   chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
-    var id = e.target.id;
-    chrome.tabs.sendMessage(tabs[0].id, {rpc: id}, (msg) => {
+    var className = e.target.className;
+    chrome.tabs.sendMessage(tabs[0].id, {rpc: className}, (msg) => {
     });
   });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var classes = document.getElementsByClassName('col-xs-3');
-  for (var i = 0; i < classes.length; i++) {
-    classes[i].addEventListener('click', onClick , false);
+  var lists = document.getElementsByTagName("li");
+  for (var i = 0; i < lists.length; i++) {
+    lists[i].addEventListener('click', onClick , false);
   }
 });
