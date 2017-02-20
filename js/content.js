@@ -1,41 +1,35 @@
  'use strict';
 
-// Color Definition
-const redColors = ["#e68585", "#c66565", "#a23f3f", "#681d1d"];
-const blueColors = ["#cae7f2", "#6cbad8", "#1f91be", "#007fb1"];
-const yellowColors = ["#FFF280", "#FFEE55", "#F9DB57", "#EDAD0B"];
-const orangeColors = ["#F9DFD5", "#EDA184", "#E06A3B", "#DA5019"];
-
 chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
     changeColor(getColorArray(msg.rpc));
   });
 
 function changeColor(colors) {
-    var calenderGraphSvg = document.querySelector(".js-calendar-graph-svg");
+  var calenderGraphSvg = document.querySelector(".js-calendar-graph-svg");
 	var gElements = calenderGraphSvg.querySelector("g").getElementsByTagName("g");
 	var legendElements = document.querySelector(".legend").getElementsByTagName("li");
 
 	[].forEach.call(gElements, function(calenderGraphSvg) {
 		var rectElements = calenderGraphSvg.getElementsByTagName("rect");
-		
+
 		[].forEach.call(rectElements, function(rectElement){
 			var fill = rectElement.getAttribute("fill");
 
 			switch(fill) {
 				case "#d6e685":
-                    rectElement.setAttribute("fill", colors[0]);
-                    break;
-                case "#8cc665":
-                    rectElement.setAttribute("fill", colors[1]);
-                    break;
-                case "#44a340":
-                    rectElement.setAttribute("fill", colors[2]);
-                    break;
-                case "#1e6823":
-                    rectElement.setAttribute("fill", colors[3]);
-                    break;
-                default:
-                    break; 
+            rectElement.setAttribute("fill", colors[0]);
+            break;
+        case "#8cc665":
+            rectElement.setAttribute("fill", colors[1]);
+            break;
+        case "#44a340":
+            rectElement.setAttribute("fill", colors[2]);
+            break;
+        case "#1e6823":
+            rectElement.setAttribute("fill", colors[3]);
+            break;
+        default:
+            break;
 			}
 		});
 	});
