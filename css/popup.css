@@ -7,22 +7,36 @@ body {
     font-family: "Helvetica Neue",Helvetica,"Hiragino Kaku Gothic Pro","Lucida Grande",Verdana,Arial,Meiryo,"メイリオ",sans-serif;
 }
 
-.col-xs-3 {
-    height: 50px !important;
+p {
+  font-size: 18px !important;
 }
 
-#red {
-    background-color: red; 
+li {
+  color: white !important;
+  font-size: 16px !important;
+  height: 30px !important;
 }
 
-#blue {
-    background-color: blue;
+li.strawberry {
+    background-color: #c63659;
 }
 
-#yellow {
-    background-color: yellow;
+li.sky {
+    background-color: #0073b0;
 }
 
-#orange {
-    background-color: orange;
+li.honey {
+    background-color: #a7663b;
+}
+
+li.indigo {
+    background-color: #0e3360;
+}
+
+li.chocolate {
+    background-color: #4b251a;
+}
+
+li.lavender {
+    background-color: #b0a2bf;
 }
