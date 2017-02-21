@@ -1,4 +1,4 @@
-# Multicolered contributions
+# Multicolered Contributions
 A simple chrome extension to change github contribution color easily. Feel free to download as belows.
 
 - [Chrome ウェブストア - Multicolered Contributions](https://goo.gl/Hg3gkp)
@@ -21,4 +21,3 @@ A simple chrome extension to change github contribution color easily. Feel free 
 
 ### lavender
 ![image](https://cloud.githubusercontent.com/assets/4817515/23127231/9a932212-f7bd-11e6-81d6-3c3e40e38c7c.png)
-
