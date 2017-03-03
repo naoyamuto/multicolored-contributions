@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Multicolered Contributions",
-  "version": "1.0",
+  "version": "1.1",
   "description": "A simple chrome extension to change github contributions color",
   "permissions": ["tabs"],
   "icons" : {

@@ -16,16 +16,16 @@ function changeColor(colors) {
             var fill = rectElement.getAttribute("fill");
 
             switch (fill) {
-                case "#d6e685":
+                case "#c6e48b":
                     rectElement.setAttribute("fill", colors[0]);
                     break;
-                case "#8cc665":
+                case "#7bc96f":
                     rectElement.setAttribute("fill", colors[1]);
                     break;
-                case "#44a340":
+                case "#239a3b":
                     rectElement.setAttribute("fill", colors[2]);
                     break;
-                case "#1e6823":
+                case "#196127":
                     rectElement.setAttribute("fill", colors[3]);
                     break;
                 default:
@@ -39,16 +39,16 @@ function changeColor(colors) {
         var legendElementColor = style.backgroundColor;
 
         switch (legendElementColor) {
-            case "rgb(214, 230, 133)":
+            case "rgb(198, 228, 139)":
                 style.backgroundColor = colors[0];
                 break;
-            case "rgb(140, 198, 101)":
+            case "rgb(123, 201, 111)":
                 style.backgroundColor = colors[1];
                 break;
-            case "rgb(68, 163, 64)":
+            case "rgb(35, 154, 59)":
                 style.backgroundColor = colors[2];
                 break;
-            case "rgb(30, 104, 35)":
+            case "rgb(25, 97, 39)":
                 style.backgroundColor = colors[3];
                 break;
             default:
